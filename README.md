@@ -9,6 +9,7 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [x] Blog Posts Single View
 -   [x] Caching Posts
 -   [x] Blog Post Overview
+-   [x] Post Categories
 -   [ ] Filtering Blogs
 -   [ ] Search Functionality
 -   [ ] Pagination
