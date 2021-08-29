@@ -15,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // Find all posts in posts folder and pass an array of Post objects to the "posts" view
     return view('posts', ['posts' => Post::all()]);
 });
 
-Route::get('/post/{post}', function ($slug) {
-    // Find a post by its slug and pass it to a view called "post"
-    return view('post', ['post' => Post::find($slug)]);
+Route::get('/post/{post}', function (Post $post) {
+    return view('post', ['post' => $post]);
 });
