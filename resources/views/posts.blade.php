@@ -1,4 +1,5 @@
 <x-layout>
+    
     @foreach ($posts as $post)
         <article>
             <a href="/post/{{ $post->slug }}">
