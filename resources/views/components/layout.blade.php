@@ -10,8 +10,15 @@
 </head>
 
 <body class="bg-gray-50">
-    <nav class="bg-gradient-to-tr from-primary-light to-primary-dark w-full h-32">
-        <h1 class="">bagita</h1>
+    <nav class="bg-gradient-to-tr from-primary-light to-primary-dark w-full h-32 p-6">
+        <h1 class="text-secondary font-semibold text-3xl">bagita</h1>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Collection</a></li>
+            <li><a href="">Author</a></li>
+        </ul>
+        <button href="">SUBSCRIBE</button>
     </nav>
     {{ $slot }}
 </body>
