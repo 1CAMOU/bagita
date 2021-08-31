@@ -1,4 +1,4 @@
-# Bagita 0.1
+# Bagita 0.1 [![CodeFactor](https://www.codefactor.io/repository/github/1camou/bagita/badge)](https://www.codefactor.io/repository/github/1camou/bagita)
 
 Bagita is an open-source, PHP-based and easy-to-use blog CMS that is completely customizable. It helps the user to manage and extend his own blog system completely without any difficulties.
 
