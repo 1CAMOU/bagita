@@ -19,3 +19,4 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [ ] A modern, customizable UI
 -   [ ] Easy blog setup
 -   [ ] CMS Dashboard
+-   [ ] Cashier Payment Integration
