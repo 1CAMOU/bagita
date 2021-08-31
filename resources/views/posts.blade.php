@@ -16,5 +16,10 @@
         </article>
     @endforeach
 
-    <x-post-card />
+    <x-post-featured-card />
+    <div class="w-95% mx-auto flex justify-between items-center">
+        <x-post-card />
+        <x-post-card />
+        <x-post-card />
+    </div>
 </x-layout>

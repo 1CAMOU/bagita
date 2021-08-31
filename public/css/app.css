@@ -6706,8 +6706,16 @@ video {
   width: 20rem;
 }
 
+.w-95 {
+  width: 23rem;
+}
+
 .w-96 {
   width: 24rem;
+}
+
+.w-100 {
+  width: 48.5rem;
 }
 
 .w-auto {
@@ -6856,6 +6864,10 @@ video {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-95\% {
+  width: 96%;
 }
 
 .min-w-0 {
@@ -38715,8 +38727,16 @@ video {
     width: 20rem;
   }
 
+  .sm\:w-95 {
+    width: 23rem;
+  }
+
   .sm\:w-96 {
     width: 24rem;
+  }
+
+  .sm\:w-100 {
+    width: 48.5rem;
   }
 
   .sm\:w-auto {
@@ -38865,6 +38885,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .sm\:w-95\% {
+    width: 96%;
   }
 
   .sm\:min-w-0 {
@@ -70646,8 +70670,16 @@ video {
     width: 20rem;
   }
 
+  .md\:w-95 {
+    width: 23rem;
+  }
+
   .md\:w-96 {
     width: 24rem;
+  }
+
+  .md\:w-100 {
+    width: 48.5rem;
   }
 
   .md\:w-auto {
@@ -70796,6 +70828,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:w-95\% {
+    width: 96%;
   }
 
   .md\:min-w-0 {
@@ -102577,8 +102613,16 @@ video {
     width: 20rem;
   }
 
+  .lg\:w-95 {
+    width: 23rem;
+  }
+
   .lg\:w-96 {
     width: 24rem;
+  }
+
+  .lg\:w-100 {
+    width: 48.5rem;
   }
 
   .lg\:w-auto {
@@ -102727,6 +102771,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .lg\:w-95\% {
+    width: 96%;
   }
 
   .lg\:min-w-0 {
@@ -134508,8 +134556,16 @@ video {
     width: 20rem;
   }
 
+  .xl\:w-95 {
+    width: 23rem;
+  }
+
   .xl\:w-96 {
     width: 24rem;
+  }
+
+  .xl\:w-100 {
+    width: 48.5rem;
   }
 
   .xl\:w-auto {
@@ -134658,6 +134714,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .xl\:w-95\% {
+    width: 96%;
   }
 
   .xl\:min-w-0 {
@@ -166439,8 +166499,16 @@ video {
     width: 20rem;
   }
 
+  .\32xl\:w-95 {
+    width: 23rem;
+  }
+
   .\32xl\:w-96 {
     width: 24rem;
+  }
+
+  .\32xl\:w-100 {
+    width: 48.5rem;
   }
 
   .\32xl\:w-auto {
@@ -166589,6 +166657,10 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .\32xl\:w-95\% {
+    width: 96%;
   }
 
   .\32xl\:min-w-0 {

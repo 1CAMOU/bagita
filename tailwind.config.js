@@ -18,6 +18,11 @@ module.exports = {
         secondary: {
           DEFAULT: '#383E66',
         }
+      },
+      width: {
+        '95': '23rem',
+        '100': '48.5rem',
+        '95%': '96%',
       }
     },
   },
