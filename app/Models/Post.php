@@ -22,4 +22,12 @@ class Post extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function readDuration()
+    {
+        $totalWords = str_word_count(implode(" ", [$this->body]));
+        $minutesToRead = round($totalWords / 200);
+
+        return (int) max(1, $minutesToRead);
+    }
 }

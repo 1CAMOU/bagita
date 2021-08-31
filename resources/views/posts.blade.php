@@ -1,25 +1,9 @@
 <x-layout>
-
-    @foreach ($posts as $post)
-        <article>
-            <a href="/post/{{ $post->slug }}">
-                <h1>{{ $post->title }}</h1>
-            </a>
-
-            <p>
-                By <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
-            </p>
-
-            <div>
-                <p>{{ $post->excerpt }}</p>
-            </div>
-        </article>
-    @endforeach
-
-    <x-post-featured-card />
-    <div class="w-95% mx-auto flex justify-between items-center">
-        <x-post-card />
-        <x-post-card />
-        <x-post-card />
+    <x-post-featured-card :post="$posts->first()" />
+        
+    <div class="lg:grid lg:grid-cols-3 lg:gap-20 lg:gap-y-10 max-w-screen-xl mx-auto">
+        @foreach ($posts->skip(1) as $post)
+            <x-post-card :post="$post" />
+        @endforeach  
     </div>
 </x-layout>

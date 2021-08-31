@@ -28,9 +28,9 @@
         <h3 class="text-white text-2xl text-center">Freedom of speech. For everyone.</h3>
     </div>
 
-    <div class="p-6">
+    <main class="p-6">
         {{ $slot }}
-    </div>
+    </main>
 
     <div class="m-6 bg-gray-100 w-auto py-14 rounded-md flex justify-center items-center">
         <div class="flex flex-col justify-center items-center">
