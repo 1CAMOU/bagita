@@ -1,5 +1,5 @@
 <x-layout>
-    <article class="flex flex-col md:flex-row justify-center my-12">
+    <article class="flex flex-col md:flex-row justify-center my-12 relative">
         <aside class="flex w-full mb-16 md:mb-0 md:w-auto flex-col items-center mr-24">
             <img class="" src="/images/content-post.png" alt="Post Thumbnail">
             <p class="text-gray-400 text-sm mt-4"><time>{{ $post->created_at->format('M d, Y') }}</time> • {{ $post->readDuration() }} min read</p>
@@ -19,19 +19,10 @@
             <p class="text-secondary">
                 {{ $post->body }}
             </p>
+
+            
         </section>
+
+        <a class="text-gray-400 absolute left-0 -bottom-20" href="/">⬅ Back to Posts</a>
     </article>
-    {{-- <article>
-        <h1>{{ $post->title }}</h1>
-
-        <p>
-            By <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
-        </p>
-
-        <div>
-            <p>{!! $post->body !!}</p>
-        </div>
-    </article>
-
-    <a href="/"><- Go Back</a> --}}
 </x-layout>
