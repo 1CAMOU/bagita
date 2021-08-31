@@ -1,0 +1,12 @@
+language: php
+
+php:
+  - 8.0
+
+before-script:
+  - composer install --no-interaction
+  - php artisan key:generate
+
+cache:
+  directories:
+    - vendor
