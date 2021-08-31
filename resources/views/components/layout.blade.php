@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-gray-50">
-    <div class="bg-gradient-to-tr from-primary-light to-primary-dark w-full pb-12">
+    <div class="bg-gradient-to-tr from-primary-light to-primary-dark w-full pb-12 shadow-md">
         <nav class="p-6 flex items-center">
             <h1 class="text-secondary font-semibold text-3xl">bagita</h1>
         
