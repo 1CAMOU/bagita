@@ -1,7 +1,7 @@
 @props(['post'])
 
 <a href="/post/{{ $post->slug }}">
-    <article class="w-full md:w-95 hover:bg-gray-100 transition-colors p-3 rounded-md flex flex-col justify-center">
+    <article class="w-full md:w-95 hover:bg-gray-150 transition-colors p-3 rounded-md flex flex-col justify-center">
         {{-- TODO --}}
         <img class="" src="/images/content-post.png" alt="Post Thumbnail">
         <div>

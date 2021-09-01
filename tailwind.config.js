@@ -17,6 +17,9 @@ module.exports = {
         },
         secondary: {
           DEFAULT: '#383E66',
+        },
+        gray: {
+          '150': '#F2F2F2',
         }
       },
       width: {
