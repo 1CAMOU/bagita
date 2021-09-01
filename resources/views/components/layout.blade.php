@@ -43,7 +43,7 @@
             <h3 class="text-xl md:text-2xl text-secondary font-medium text-center break-words">Stay in touch with the latest posts</h3>
             <h4 class="text-md md:text-lg text-secondary text-center">Promise to keep the inbox clean. No spam.</h4>
 
-            <form class="w-11/12 md:w-96 h-9 relative mt-6 flex flex-col md:flex-row bg-gray-150">
+            <form class="w-11/12 md:w-96 h-9 relative mt-6 flex flex-col md:flex-row bg-gray-200">
                 <svg class="absolute left-3 top-3" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.00299072 1.884L7.99999 5.882L15.997 1.884C15.9674 1.37444 15.7441 0.895488 15.3728 0.545227C15.0015 0.194965 14.5104 -9.35847e-05 14 3.36834e-08H1.99999C1.48958 -9.35847e-05 0.998438 0.194965 0.627168 0.545227C0.255899 0.895488 0.0325948 1.37444 0.00299072 1.884Z" fill="#383E66" fill-opacity="0.6"/>
                     <path d="M16 4.11804L8 8.11804L0 4.11804V10C0 10.5305 0.210714 11.0392 0.585786 11.4143C0.960859 11.7893 1.46957 12 2 12H14C14.5304 12 15.039   1 11.7893 15.4142 11.4143C15.7893 11.0392 16 10.5305 16 10V4.11804Z" fill="#383E66" fill-opacity="0.6"/>
