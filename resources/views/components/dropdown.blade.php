@@ -5,7 +5,7 @@
         {{ $trigger }}
     </div>
 
-    <div x-show="show" class="py-2 md:absolute bg-gray-150 w-full rounded-b-md shadow-lg" style="display: none;">
+    <div x-show="show" class="py-2 md:absolute bg-gray-150 w-full rounded-b-md shadow-lg max-h-52" style="display: none;">
         {{ $slot }}        
     </div>
 

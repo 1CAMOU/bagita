@@ -1,4 +1,5 @@
 <div class="my-4 flex flex-col md:flex-row justify-center">
+    {{-- Categories --}}
     <div class="relative flex lg:inline-flex w-full md:w-auto items-center bg-gray-150 rounded-md m-2 text-center text-sm font-medium text-secondary ">
         <x-dropdown>
             <x-slot name="trigger">
@@ -17,7 +18,8 @@
         </x-dropdown>
     </div>
 
-    <div class="relative flex lg:inline-flex items-center w-full md:w-auto bg-gray-150 rounded-md m-2">
+    {{-- Other Filters --}}
+    {{-- <div class="relative flex lg:inline-flex items-center w-full md:w-auto bg-gray-150 rounded-md m-2">
         <select class="flex-1 appearance-none bg-transparent py-2 px-8 pr-12 text-sm font-medium text-secondary cursor-pointer focus:outline-none"><a href="/" class="block text-left leading-6 px-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none transition-colors">All</a>
 
         @foreach ($categories as $category)
@@ -36,8 +38,9 @@
         </select>
 
         <x-icon name="arrow-down" class="absolute right-6 pointer-events-none" />
-    </div>
+    </div> --}}
 
+    {{-- Search Bar --}}
     <div id="searchbar" class="relative flex lg:inline-flex w-full md:w-auto items-center bg-gray-150 rounded-md m-2">
         <input class="flex-1 appearance-none bg-transparent text-center w-72 pt-3 pb-2 px-16 pl-18 text-sm font-medium text-secondary placeholder-secondary focus:outline-none" type="text" placeholder="Search for a post" onkeyup="searchBarTyping()">
 

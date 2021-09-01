@@ -16,11 +16,9 @@
             <h4 class="text-blue-700 font-medium">{{ $post->category->name }}</h4>
             <h2 class="text-secondary font-semibold text-lg mb-6">{{ $post->title }}</h2>
 
-            <p class="text-secondary">
-                {{ $post->body }}
-            </p>
-
-            
+            <div class="text-secondary space-y-4">
+                {!! $post->body !!}
+            </div>            
         </section>
 
         <a class="text-gray-400 absolute left-0 -bottom-20" href="/">⬅ Back to Posts</a>

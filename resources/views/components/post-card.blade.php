@@ -7,7 +7,7 @@
         <div>
             <h4 class="text-blue-700 mt-3 font-medium">{{ $post->category->name }}</h4>
             <h2 class="text-secondary font-semibold text-lg mb-3">{{ $post->title }}</h2>
-            <p class="text-secondary text-sm pb-5">{{ $post->excerpt }}</p>
+            <div class="text-secondary text-sm pb-5 space-y-4">{!! $post->excerpt !!}</div>
             <div class="flex items-center">
                 <img class="mr-6" src="/images/author.png" alt="Author">
                 <div class="">
