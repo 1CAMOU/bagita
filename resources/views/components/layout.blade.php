@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/app.css') }}" rel=stylesheet>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ asset('js/searchbar.js') }}" defer></script>
 
     <title>Blog</title>
@@ -13,7 +15,7 @@
 <body class="bg-gray-50">
     <div class="bg-gradient-to-tr from-primary-light to-primary-dark w-full pb-12 shadow-md">
         <nav class="p-6 flex flex-col md:flex-row items-center">
-            <h1 class="text-secondary font-semibold text-3xl">bagita</h1>
+            <a href="/"><h1 class="text-secondary font-semibold text-3xl">bagita</h1></a>
         
             <ul class="flex mt-4 md:mt-0 md:ml-24">
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Home</a></li>
