@@ -1,5 +1,5 @@
 <x-layout>
-    @include ('_posts-header')
+    @include ('posts._header')
 
     @if ($posts->count())
         <x-post-featured-card :post="$posts->first()" />
