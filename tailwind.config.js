@@ -26,7 +26,10 @@ module.exports = {
         '95': '23rem',
         '100': '48.5rem',
         '95%': '96%',
-      }
+      },
+      height: {
+        '100': '30rem',
+      },
     },
   },
   variants: {

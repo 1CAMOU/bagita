@@ -1,14 +1,14 @@
 @props(['post'])
 
-<div class="hover:bg-gray-150 transition-colors rounded-md flex flex-col justify-center">
+<div class="hover:bg-gray-150 transition-colors rounded-md flex flex-col justify-between p-3 md:h-100">
     <a href="/post/{{ $post->slug }}">
-        <article class="md:w-95 p-3">
+        <article class="">
             {{-- TODO --}}
-            <img class="" src="/images/content-post.png" alt="Post Thumbnail">
+            <img class="w-full" src="/images/content-post.png" alt="Post Thumbnail">
             <div>
-                <h4 class="text-blue-700 mt-3 font-medium">{{ $post->category->name }}</h4>
+                <h4 class="text-blue-700 mt-3 font-medium break">{{ $post->category->name }}</h4>
                 <h2 class="text-secondary font-semibold text-lg mb-3">{{ $post->title }}</h2>
-                <div class="text-secondary text-sm pb-5 space-y-4">{!! $post->excerpt !!}</div>
+                <div class="text-secondary text-sm pb-5 space-y-4">{!! substr($post->excerpt, 0, 100) . '...' !!}</div>
             </div>
         </article>
     </a>
