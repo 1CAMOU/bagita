@@ -13,7 +13,7 @@
         </article>
     </a>
     
-    <a href="/author/{{ $post->author->username }}">
+    <a href="/?author={{ $post->author->username }}">
         <div class="flex items-center p-3">
             <img class="mr-6" src="/images/author.png" alt="Author">
             <div class="">

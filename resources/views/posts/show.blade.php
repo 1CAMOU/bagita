@@ -3,13 +3,16 @@
         <aside class="flex w-full mb-16 md:mb-0 md:w-auto flex-col items-center mr-24">
             <img class="" src="/images/content-post.png" alt="Post Thumbnail">
             <p class="text-gray-400 text-sm mt-4"><time>{{ $post->created_at->format('M d, Y') }}</time> • {{ $post->readDuration() }} min read</p>
-            <div class="flex items-center mt-6">
-                <img class="mr-6" src="/images/author.png" alt="Author" width=50 height=50>
-                <div>
-                    <h5 class="text-secondary font-medium">{{ $post->author->name }}</h5>
-                    <p class="text-gray-400 text-sm">{{ $post->author->username }}</p>
+            <a href="/?author={{ $post->author->username }}">
+                <div class="flex items-center mt-6">
+                    <img class="mr-6" src="/images/author.png" alt="Author" width=50 height=50>
+                    <div>
+                        <h5 class="text-secondary font-medium">{{ $post->author->name }}</h5>
+                        <p class="text-gray-400 text-sm">{{ $post->author->username }}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
+            
         </aside>
 
         <section class="w-full md:w-1/2">
