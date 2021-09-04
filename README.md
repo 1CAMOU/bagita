@@ -11,9 +11,9 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [x] Caching Posts
 -   [x] Blog Post Overview
 -   [x] Post Categories
--   [ ] Filtering Blogs
--   [ ] Search Functionality
--   [ ] Pagination
+-   [X] Filtering Blogs
+-   [X] Search Functionality
+-   [X] Pagination
 -   [ ] Comments
 -   [ ] Newsletter Integration
 -   [ ] Editor authentication
