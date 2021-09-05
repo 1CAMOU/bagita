@@ -8,6 +8,16 @@
             </div>
 
             <div class="mt-6 flex flex-col px-4 sm:px-10">
+                <label class="text-secondary text-lg" for="name">Name</label>
+                <input class="w-full rounded-md p-3 pt-4 mt-2 focus:outline-none text-secondary text-sm" type="text" name="name" id="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="mt-6 flex flex-col px-4 sm:px-10">
+                <label class="text-secondary text-lg" for="username">Username</label>
+                <input class="w-full rounded-md p-3 pt-4 mt-2 focus:outline-none text-secondary text-sm" type="text" name="username" id="username" placeholder="johndoe123" required>
+            </div>
+
+            <div class="mt-6 flex flex-col px-4 sm:px-10">
                 <label class="text-secondary text-lg" for="email">Email</label>
                 <input class="w-full rounded-md p-3 pt-4 mt-2 focus:outline-none text-secondary text-sm" type="email" name="email" id="email" placeholder="name@company.com" required>
             </div>
