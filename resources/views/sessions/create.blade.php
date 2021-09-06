@@ -1,0 +1,35 @@
+<x-layout>
+    <div class="max-w-md mx-auto bg-primary rounded-md shadow-xl py-8 mt-8">
+        <form method="POST" action="/login">
+            @csrf
+
+            <div class="flex items-center px-4 sm:px-10 justify-center">
+                <x-icon name="locked" class="text-secondary"></x-icon>
+                <h2 class="text-secondary font-semibold text-xl ml-5 mt-1">Log in</h2>
+                <a href="/register" class="text-secondary text-lg ml-auto mt-1 hidden sm:block">or <span class="underline">sign up</span></a>
+            </div>
+
+            <div class="mt-6 flex flex-col px-4 sm:px-10">
+                <label class="text-secondary text-lg" for="email">Email</label>
+                <input class="w-full rounded-md p-3 pt-4 mt-2 focus:outline-none text-secondary text-sm" type="email" name="email" id="email" placeholder="name@company.com" value="{{ old('email') }}" required>
+            </div>
+
+            <div class="mt-6 flex flex-col px-4 sm:px-10">
+                <label class="text-secondary text-lg" for="password">Password</label>
+                <input class="w-full rounded-md p-3 pt-4 mt-2 focus:outline-none text-secondary text-sm" type="password" name="password" id="password" placeholder="************" required>
+            </div>
+
+            @error('email')
+                <p class="text-xs text-red-500 mt-1 sm:px-10">{{ $message }}</p>
+            @enderror
+
+            <div class="mt-8 px-4 sm:px-10">
+                <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Sign Up</button>
+            </div>
+
+            <div class="mt-4 px-4 sm:px-10 sm:hidden block">
+                <a href="/register" class="w-full py-4 rounded-md text-secondary">or <span class="underline">sign up</span></a>
+            </div>
+        </form>
+    </div>
+</x-layout>

@@ -46,11 +46,11 @@
             @enderror
 
             <div class="mt-8 px-4 sm:px-10">
-                <button class="bg-secondary w-full py-4 rounded-md text-white">Sign Up</button>
+                <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Sign Up</button>
             </div>
 
             <div class="mt-4 px-4 sm:px-10 sm:hidden block">
-                <button type="submit" class="w-full py-4 rounded-md text-secondary">or <span class="underline">log in</span></button>
+                <a href="/login" class="w-full py-4 rounded-md text-secondary">or <span class="underline">log in</span></a>
             </div>
         </form>
     </div>
