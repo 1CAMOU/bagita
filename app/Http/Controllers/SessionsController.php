@@ -20,6 +20,8 @@ class SessionsController extends Controller
         ]);
 
         if (Auth::attempt($attributes)) {
+            session()->regenerate();
+
             return redirect('/')->with('toast', 'Successfully logged in.');
         }
 
