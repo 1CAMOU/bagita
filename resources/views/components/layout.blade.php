@@ -53,6 +53,13 @@
             </form>
         </div>
     </div>
+
+    @if (session()->has('toast')) 
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" class="px-40 py-6 fixed text-center bottom-6 left-1/2 -translate-x-1/2 transform flex justify-center items-center bg-secondary rounded-md shadow-lg z-highest">
+            <x-icon name="shield-check" class="text-primary-light mr-6" />
+            <p class="text-primary-light mt-1">{{ session('toast') }}</p>
+        </div>
+    @endif 
 </body>
 
 </html>

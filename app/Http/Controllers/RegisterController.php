@@ -23,6 +23,6 @@ class RegisterController extends Controller
 
         User::create($attributes);
 
-        return redirect('/');
+        return redirect('/')->with('toast', 'Your account has been created.');
     }
 }
