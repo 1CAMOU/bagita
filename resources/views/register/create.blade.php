@@ -1,6 +1,8 @@
 <x-layout>
     <div class="max-w-md mx-auto bg-primary rounded-md shadow-xl py-8 mt-8">
         <form method="POST" action="/register">
+            @csrf
+
             <div class="flex items-center px-4 sm:px-10 justify-center">
                 <x-icon name="locked" class="text-secondary"></x-icon>
                 <h2 class="text-secondary font-semibold text-xl ml-5 mt-1">Sign Up</h2>
@@ -32,7 +34,7 @@
             </div>
 
             <div class="mt-4 px-4 sm:px-10 sm:hidden block">
-                <button class="w-full py-4 rounded-md text-secondary">or <span class="underline">log in</span></button>
+                <button type="submit" class="w-full py-4 rounded-md text-secondary">or <span class="underline">log in</span></button>
             </div>
         </form>
     </div>
