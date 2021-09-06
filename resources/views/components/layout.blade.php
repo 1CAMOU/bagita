@@ -18,13 +18,24 @@
             <a href="/"><h1 class="text-secondary font-semibold text-3xl">bagita</h1></a>
         
             <ul class="flex mt-4 md:mt-0 md:ml-24">
-                <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Home</a></li>
+                <li class="text-secondary font-medium mr-2 md:mr-6"><a href="/">Home</a></li>
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">About</a></li>
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Collection</a></li>
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Author</a></li>
             </ul>
         
-            <button class="md:ml-auto mt-8 md:mt-0 bg-gray-50 px-6 pt-2 pb-1 rounded-md text-secondary font-semibold" href="">SUBSCRIBE</button>
+            <div class="md:ml-auto mt-8 md:mt-0 flex flex-col md:flex-row items-center">
+                @auth
+                    <form method="POST" action="/logout" class="mr-2 md:mr-6">
+                        @csrf
+                        <button type="submit" class="text-secondary font-medium">Logout</button>
+                    </form>
+                @else
+                    <a href="/register" class="text-secondary font-medium mr-2 md:mr-6">Sign Up</a>
+                @endauth
+                
+                <button class="bg-gray-50 px-6 pt-2 pb-1 rounded-md text-secondary font-semibold" href="">SUBSCRIBE</button>
+            </div>
         </nav>
         
         <h2 class="text-white font-semibold text-2xl text-center mt-4">Welcome to bagita</h2>

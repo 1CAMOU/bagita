@@ -6,7 +6,7 @@
             <div class="flex items-center px-4 sm:px-10 justify-center">
                 <x-icon name="locked" class="text-secondary"></x-icon>
                 <h2 class="text-secondary font-semibold text-xl ml-5 mt-1">Sign Up</h2>
-                <a href="/register" class="text-secondary text-lg ml-auto mt-1 hidden sm:block">or <span class="underline">log in</span></a>
+                <a href="/login" class="text-secondary text-lg ml-auto mt-1 hidden sm:block">or <span class="underline">log in</span></a>
             </div>
 
             <div class="mt-6 flex flex-col px-4 sm:px-10">
