@@ -31,7 +31,7 @@
                         <button type="submit" class="text-secondary font-medium">Logout</button>
                     </form>
                 @else
-                    <a href="/register" class="text-secondary font-medium mr-2 md:mr-6">Sign Up</a>
+                    <a href="/login" class="text-secondary font-medium mr-2 md:mr-6">Login</a>
                 @endauth
                 
                 <button class="bg-gray-50 px-6 pt-2 pb-1 rounded-md text-secondary font-semibold" href="">SUBSCRIBE</button>
@@ -68,7 +68,7 @@
     @if (session()->has('toast')) 
         <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" class="px-40 py-6 fixed text-center bottom-6 left-1/2 -translate-x-1/2 transform flex justify-center items-center bg-secondary rounded-md shadow-lg z-highest">
             <x-icon name="shield-check" class="text-primary-light mr-6" />
-            <p class="text-primary-light mt-1">{{ session('toast') }}</p>
+            <p class="text-primary-light mt-1">{!! session('toast') !!}</p>
         </div>
     @endif 
 </body>

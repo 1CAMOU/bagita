@@ -14,11 +14,11 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [X] Filtering Blogs
 -   [X] Search Functionality
 -   [X] Pagination
+-   [X] User authentication
 -   [ ] Comments
 -   [ ] Newsletter Integration
--   [ ] Editor authentication
 -   [ ] A modern, customizable UI
 -   [ ] Easy blog setup
--   [ ] CMS Dashboard
+-   [ ] CMS Admin Dashboard
 -   [ ] Cashier Payment Integration
 -   [ ] 1-Click-Creation of Blog Posts
