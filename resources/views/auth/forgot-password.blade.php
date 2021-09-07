@@ -1,10 +1,10 @@
-<x-guest-layout>
+<x-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <a href="/"><h1 class="text-secondary font-semibold text-3xl">bagita</h1></a>
-            </a>
-        </x-slot>
+        <!-- Title -->
+        <div class="flex items-center justify-center mb-4">
+            <x-icon name="key" class="text-secondary" />
+            <h2 class="text-secondary font-semibold text-xl ml-5 mt-1">Password Reset</h2>
+        </div>
 
         <div class="mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
@@ -26,11 +26,9 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
+            <div class="mt-8">
+                <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Send me an Email</button>
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-layout>
