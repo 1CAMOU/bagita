@@ -1,10 +1,11 @@
-<x-guest-layout>
+<x-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <h2 class="text-xl text-secondary">bagita</h2>
-            </a>
-        </x-slot>
+        <!-- Title -->
+        <div class="flex items-center justify-center mb-4">
+            <x-icon name="locked" class="text-secondary" />
+            <h2 class="text-secondary font-semibold text-xl ml-5 mt-1">Sign Up</h2>
+            <a href="/login" class="text-secondary text-lg ml-auto mt-1 hidden sm:block">or <span class="underline">log in</span></a>
+        </div>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
@@ -17,6 +18,13 @@
                 <x-label for="name" :value="__('Name')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
+            
+            <!-- Username -->
+            <div class="mt-4">
+                <x-label for="username" :value="__('Username')" />
+
+                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required />
             </div>
 
             <!-- Email Address -->
@@ -45,15 +53,13 @@
                                 name="password_confirmation" required />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+            <div class="mt-8">
+                <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Sign Up</button>
+            </div>
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
+            <div class="mt-4 sm:hidden block">
+                <a href="/login" class="w-full py-4 rounded-md text-secondary">or <span class="underline">log in</span></a>
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-layout>

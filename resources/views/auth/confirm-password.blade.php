@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <h2 class="text-xl text-secondary">bagita</h2>
+                <a href="/"><h1 class="text-secondary font-semibold text-3xl">bagita</h1></a>
             </a>
         </x-slot>
 

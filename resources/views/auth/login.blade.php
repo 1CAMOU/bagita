@@ -1,10 +1,11 @@
-<x-guest-layout>
+<x-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <h2 class="text-xl text-secondary">bagita</h2>
-            </a>
-        </x-slot>
+        <!-- Title -->
+        <div class="flex items-center justify-center mb-4">
+            <x-icon name="locked" class="text-secondary" />
+            <h2 class="text-secondary font-semibold text-xl ml-5 mt-1">Log In</h2>
+            <a href="/register" class="text-secondary text-lg ml-auto mt-1 hidden sm:block">or <span class="underline">sign up</span></a>
+        </div>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -35,22 +36,26 @@
             <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                    <input id="remember_me" type="checkbox" class="rounded-md text-primary checked:bg-primary checked:border-pink-900" name="remember">
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex flex-col items-center">
+                <div class="mt-8 w-full">
+                    <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Sign Up</button>
+                </div>
+    
+                <div class="mt-4 sm:hidden block">
+                    <a href="/login" class="w-full py-4 rounded-md text-secondary">or <span class="underline">log in</span></a>
+                </div>
+
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="mt-6 text-sm text-secondary hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-layout>
