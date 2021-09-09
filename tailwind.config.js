@@ -32,7 +32,10 @@ module.exports = {
       },
       zIndex: {
         'highest': '99999',
-      }
+      },
+      inset: {
+        '27': '6.5rem',
+      },
     },
   },
   variants: {

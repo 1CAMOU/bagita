@@ -31,11 +31,7 @@
                         <button type="submit" class="text-secondary font-medium">Logout</button>
                     </form>
                 @else
-<<<<<<< HEAD
-                    <a href="/register" class="text-secondary font-medium mb-2 md:mb-0 mr-2 md:mr-6">Sign Up</a>
-=======
                     <a href="/login" class="text-secondary font-medium mr-2 md:mr-6">Login</a>
->>>>>>> 88f7372f9e363f4bcbd328c7ac9f718749c319d3
                 @endauth
                 
                 <button class="bg-gray-50 px-6 pt-2 pb-1 rounded-md text-secondary font-semibold" href="">SUBSCRIBE</button>
