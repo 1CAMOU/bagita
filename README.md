@@ -15,7 +15,7 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [X] Search Functionality
 -   [X] Pagination
 -   [X] User authentication
--   [ ] Comments
+-   [X] Comments
 -   [ ] Newsletter Integration
 -   [ ] A modern, customizable UI
 -   [ ] Easy blog setup
