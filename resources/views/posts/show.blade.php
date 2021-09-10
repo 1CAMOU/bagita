@@ -27,25 +27,40 @@
         </div>
 
         <section class="mt-18 space-y-6">
-            <h2 class="text-center mt-24 font-semibold text-xl text-secondary">Discuss this Topic</h2>
+            <h2 class="text-center mt-24 mb-4 font-semibold text-xl text-secondary">Discuss this Topic</h2>
 
-            <form method="POST" action="#" class="h-18 max-w-5xl rounded-md mx-auto w-full p-6 border-2 border-gray-150">
-                @csrf
+            @auth
+                <form method="POST" action="/post/{{ $post->slug }}/comments" class="h-18 max-w-5xl rounded-md mx-auto w-full p-6 border-2 border-gray-150">
+                    @csrf
 
-                <header class="flex items-center">
-                    <img src="https://i.pravatar.cc/80?u={{ auth()->id() }}" class="rounded-md mr-6" alt="">
-                    <h2 class="text-secondary font-medium">Want to participate?</h2>
-                </header>
+                    <header class="flex items-center">
+                        <img src="https://i.pravatar.cc/80?u={{ auth()->id() }}" class="rounded-md mr-6" alt="">
+                        <h2 class="text-secondary font-medium">Want to participate?</h2>
+                    </header>
 
-                <div class="mt-4">
-                    <textarea name="body" class="w-full rounded-md bg-gray-150 text-sm focus:outline-none focus:ring focus:ring-gray-200 p-6 text-secondary" cols="30" rows="6" placeholder="What do you want to say?"></textarea>
-                </div>
+                    <div class="mt-4">
+                        <textarea name="body" class="w-full rounded-md bg-gray-150 text-sm focus:outline-none focus:ring focus:ring-gray-200 p-6 text-secondary" cols="30" rows="6" required placeholder="What do you want to say?"></textarea>
 
-                <div class="mt-4 flex md:justify-end border-t-2 border-gray-200">
-                    <button type="submit" class="mt-6 px-16 pt-3 pb-2 w-full md:w-auto bg-primary rounded-md text-secondary font-semibold hover:bg-primary-light transition">POST</button>
-                </div>
-            </form>
+                        @error('body')
+                            <span class="text-xs text-red-500">{{ message }}</span>
+                        @enderror
+                    </div>
 
+                    <div class="mt-4 flex md:justify-end border-t-2 border-gray-200">
+                        <button type="submit" class="mt-6 px-16 pt-3 pb-2 w-full md:w-auto bg-primary rounded-md text-secondary font-semibold hover:bg-primary-light transition">POST</button>
+                    </div>
+                </form>
+            @else
+                <a href="/login" class="text-gray-300 hover:text-secondary transition-colors">
+                    <div class="h-18 max-w-5xl rounded-md mx-auto w-full p-6 border-2 border-dashed border-gray-150 hover:border-secondary ">
+                        <header class="flex items-center">
+                            <img src="/images/unknown-author.jpeg" width="80" height="80" class="rounded-md mr-6" alt="">
+                            <h2 class="font-medium">Sign in to contribute to the discussion.</h2>
+                        </header>
+                    </div>
+                </a>    
+            @endauth
+            
             @foreach ($post->comments as $comment)
                 <x-comment :comment="$comment" />
             @endforeach

@@ -2,7 +2,7 @@
     <div class="flex flex-wrap h-full relative">
         <div class="w-12 md:w-20 mr-6 md:h-full">
             <a href="">
-                <img src="https://i.pravatar.cc/100?u={{ $comment->id }}" class="rounded-md w-full" alt="">
+                <img src="https://i.pravatar.cc/100?u={{ $comment->user_id }}" class="rounded-md w-full" alt="">
             </a>
         </div>
 
@@ -10,7 +10,7 @@
             <a href="" class="font-bold text-secondary">{{ $comment->author->username }}</a>
             <p class="text-xs text-secondary">Posted 
                 <time>
-                    {{ $comment->created_at }}
+                    {{ $comment->created_at->format('F j, Y, g:i a') }}
                 </time>
             </p>
         </header>

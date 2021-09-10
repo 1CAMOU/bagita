@@ -10,7 +10,7 @@
             <div class="w-full md:w-95 ml-auto">
                 <h4 class="text-primary-dark mt-4 font-medium">{{ $post->category->name }}</h4>
                 <h2 class="text-secondary font-semibold text-lg mb-6">{{ $post->title }}</h2>
-                <div class="text-secondary text-sm md:pb-6 space-y-4">{!! substr($post->excerpt, 0, 150) . '...' !!}</div>
+                <div class="text-secondary text-sm md:pb-6 space-y-4">{{ substr($post->excerpt, 0, 150) . '...' }}</div>
             </div>
         </a>
 
