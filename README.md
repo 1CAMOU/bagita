@@ -16,8 +16,7 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [X] Pagination
 -   [X] User authentication
 -   [X] Comments
--   [ ] Newsletter Integration
--   [ ] A modern, customizable UI
+-   [X] Newsletter Integration
 -   [ ] Easy blog setup
 -   [ ] CMS Admin Dashboard
 -   [ ] Cashier Payment Integration
