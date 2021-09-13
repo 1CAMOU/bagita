@@ -12,4 +12,6 @@ Route::post('post/{post:slug}/comments', [CommentController::class, 'store'])->m
 
 Route::post('newsletter', NewsletterController::class);
 
+Route::get('admin/post/create', [PostController::class, 'create'])->middleware('admin');
+
 require __DIR__ . '/auth.php';
