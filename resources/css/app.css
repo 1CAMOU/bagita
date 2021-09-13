@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url("../fonts/poppins-medium-webfont.woff2") format("woff2"),
