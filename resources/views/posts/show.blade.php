@@ -2,7 +2,7 @@
     <article class="flex flex-col my-12 md:mx-12 lg:mx-24 relative">
         <div class="flex flex-col md:flex-row justify-between">
             <aside class="flex w-full mb-16 md:mb-0 md:w-auto flex-col items-center mr-24">
-                <img class="" src="/images/content-post.png" alt="Post Thumbnail">
+                <img class="w-96 rounded-md" src="{{ asset('storage/' . $post->thumbnail) }}" alt="Post Thumbnail">
                 <p class="text-gray-400 text-sm mt-4"><time>{{ $post->created_at->format('M d, Y') }}</time> • {{ $post->readDuration() }} min read</p>
                 <a href="/?author={{ $post->author->username }}">
                     <div class="flex items-center mt-6">

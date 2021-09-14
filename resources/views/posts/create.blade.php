@@ -12,7 +12,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="/admin/post">
+        <form method="POST" action="/admin/post" enctype="multipart/form-data">
             @csrf
 
             <!-- Title -->
@@ -55,7 +55,14 @@
 
                 <x-input id="slug" class="block mt-1 w-full" type="text" name="slug" :value="old('slug')" required />
             </div>
-            
+
+            <!-- Thumbnail -->
+            <div class="mt-4">
+                <x-label for="thumbnail" :value="__('Thumbnail')" />
+
+                <x-input id="thumbnail" class="block mt-1 w-full bg-white" type="file" name="thumbnail" :value="old('thumbnail')" required />
+            </div>
+
             <div class="mt-8 w-full">
                 <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Publish</button>
             </div>
