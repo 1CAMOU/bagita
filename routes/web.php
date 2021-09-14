@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsletterController;
 
@@ -12,6 +13,7 @@ Route::post('post/{post:slug}/comments', [CommentController::class, 'store'])->m
 
 Route::post('newsletter', NewsletterController::class);
 
+Route::get('admin/dashboard', [AdminController::class, 'index'])->middleware('admin');
 Route::get('admin/post/create', [PostController::class, 'create'])->middleware('admin');
 Route::post('admin/post', [PostController::class, 'store'])->middleware('admin');
 

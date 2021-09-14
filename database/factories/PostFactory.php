@@ -30,6 +30,7 @@ class PostFactory extends Factory
             'title' => $this->faker->sentence(),
             'excerpt' => $this->faker->paragraph(),
             'body' => '<p>' . implode('</p><p>', $this->faker->paragraphs(6)) . '</p>',
+            'thumbnail' => 'unknown-thumbnail.png',
         ];
     }
 }

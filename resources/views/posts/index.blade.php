@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.default>
     @include ('posts._header')
 
     @if ($posts->count())
@@ -12,4 +12,4 @@
             <p class="text-center">No Posts found! Please try again later.</p>
         @endif
     @endif
-</x-layout>
+</x-layouts.default>

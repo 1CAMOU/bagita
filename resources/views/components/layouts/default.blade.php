@@ -9,7 +9,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ asset('js/searchbar.js') }}" defer></script>
 
-    <title>Blog</title>
+    <title>bagita</title>
 </head>
 
 <body class="bg-gray-50">
@@ -22,6 +22,12 @@
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">About</a></li>
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Collection</a></li>
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Author</a></li>
+
+                @auth
+                    @if (auth()->user()->isAdmin)
+                        <li class="text-secondary font-medium mr-2 md:mr-6"><a href="/admin/dashboard">Dashboard</a></li>
+                    @endif
+                @endauth
             </ul>
         
             <div class="md:ml-auto mt-8 md:mt-0 flex flex-col md:flex-row items-center">

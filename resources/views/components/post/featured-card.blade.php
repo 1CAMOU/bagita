@@ -16,7 +16,7 @@
 
         <a href="/?author={{ $post->author->username }}">
             <div class="flex items-center mt-6">
-                <img class="mr-6" src="/images/author.png" alt="Author">
+                <img class="mr-6 rounded-sm" src="/images/unknown-author.jpeg" alt="Author" width=50 height=50>
                 <div class="">
                     <h5 class="text-secondary font-medium">{{ $post->author->name }}</h5>
                     <p class="text-gray-400 text-sm"><time>{{ $post->created_at->format('M d, Y') }}</time> • {{ $post->readDuration() }} min read</p>

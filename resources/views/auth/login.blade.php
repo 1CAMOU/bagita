@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.default>
     <x-form.panel>
         <!-- Title -->
         <div class="flex items-center justify-center mb-4">
@@ -58,4 +58,4 @@
             </div>
         </form>
     </x-form.panel>
-</x-layout>
+</x-layouts.default>
