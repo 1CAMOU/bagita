@@ -37,8 +37,25 @@
             </div>
 
             <!-- Category -->
-            
+            <div class="mt-4">
+                <x-label for="category_id" :value="__('Category')" />
 
+                <select id="category_id" class="block mt-1 w-full rounded-md focus:outline-none py-3 px-4 text-secondary font-medium" name="category_id" required>
+                    @foreach (\App\Models\Category::all() as $category)
+                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                            {{ ucwords($category->name) }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <!-- Slug -->
+            <div class="mt-4">
+                <x-label for="slug" :value="__('Slug')" />
+
+                <x-input id="slug" class="block mt-1 w-full" type="text" name="slug" :value="old('slug')" required />
+            </div>
+            
             <div class="mt-8 w-full">
                 <button type="submit" class="bg-secondary w-full py-4 rounded-md text-white">Publish</button>
             </div>
