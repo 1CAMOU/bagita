@@ -2,10 +2,10 @@
     @include ('posts._header')
 
     @if ($posts->count())
-        <x-post-featured-card :post="$posts->first()" />
+        <x-post.featured-card :post="$posts->first()" />
             
         @if ($posts->count())
-            <x-post-grid :posts="$posts" />
+            <x-post.grid :posts="$posts" />
 
             {{ $posts->links() }}
         @else

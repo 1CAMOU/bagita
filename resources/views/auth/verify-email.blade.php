@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <x-auth-card>
+    <x-form.panel>
         <x-slot name="logo">
             <a href="/">
                 <a href="/"><h1 class="text-secondary font-semibold text-3xl">bagita</h1></a>
@@ -35,5 +35,5 @@
                 </button>
             </form>
         </div>
-    </x-auth-card>
+    </x-form.panel>
 </x-guest-layout>

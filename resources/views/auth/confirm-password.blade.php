@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <x-auth-card>
+    <x-form.panel>
         <x-slot name="logo">
             <a href="/">
                 <a href="/"><h1 class="text-secondary font-semibold text-3xl">bagita</h1></a>
@@ -11,16 +11,16 @@
         </div>
 
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <x-form.validation-errors class="mb-4" :errors="$errors" />
 
         <form method="POST" action="{{ route('password.confirm') }}">
             @csrf
 
             <!-- Password -->
             <div>
-                <x-label for="password" :value="__('Password')" />
+                <x-form.label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block mt-1 w-full"
+                <x-form.input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
@@ -32,5 +32,5 @@
                 </x-button>
             </div>
         </form>
-    </x-auth-card>
+    </x-form.panel>
 </x-guest-layout>
