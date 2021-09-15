@@ -19,9 +19,6 @@
         
             <ul class="flex mt-4 md:mt-0 md:ml-24">
                 <li class="text-secondary font-medium mr-2 md:mr-6"><a href="/">Home</a></li>
-                <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">About</a></li>
-                <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Collection</a></li>
-                <li class="text-secondary font-medium mr-2 md:mr-6"><a href="">Author</a></li>
 
                 @auth
                     @if (auth()->user()->isAdmin)

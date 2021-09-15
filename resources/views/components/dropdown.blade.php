@@ -1,6 +1,6 @@
 @props(['trigger'])
 
-<div x-data="{ show: false }" class="w-full md:w-auto" @click.away="show = false">
+<div x-data="{ show: false }" {{ $attributes(['class' => "w-full md:w-auto"]) }} @click.away="show = false">
     <div @click="show = ! show">
         {{ $trigger }}
     </div>

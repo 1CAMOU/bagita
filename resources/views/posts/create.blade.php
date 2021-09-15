@@ -75,8 +75,17 @@
 
             <article class="flex flex-col my-8 relative">
                 <div class="flex flex-col md:flex-row justify-between">
-                    <aside class="flex w-full mb-16 md:mb-0 md:w-auto flex-col items-center mr-24">
-                        <img class="w-96 rounded-md" src="/images/unknown-thumbnail.png" alt="Post Thumbnail">
+                    <aside x-data="imageViewer()" class="flex w-full mb-16 md:mb-0 md:w-auto flex-col items-center mr-24">
+                        <input id="thumbnail" class="absolute w-96 h-3/4 cursor-pointer opacity-0" type="file" name="thumbnail" :value="old('thumnbail')" accept="image/*" @change="fileChosen">
+
+                        <template x-if="imageUrl">
+                            <img class="w-96 h-40 rounded-md object-cover" :src="imageUrl" alt="Post Thumbnail">
+                        </template>
+
+                        <template x-if="!imageUrl">
+                            <img class="w-96 h-40 rounded-md object-cover" src="/images/unknown-thumbnail.png" alt="Post Thumbnail">
+                        </template>
+
                         <p class="text-gray-300 text-sm mt-4"><time>{{ date('M d, Y') }}</time> • 1 min read</p>
                         <a href="/?author={{ auth()->user()->username }}">
                             <div class="flex items-center mt-6">
@@ -90,15 +99,55 @@
                     </aside>
             
                     <section class="w-full md:w-1/2">
-                        <h4 class="text-blue-700 font-medium">category</h4>
-                        <h2 class="text-gray-200 font-semibold text-lg mb-6">post title</h2>
+                        <x-admin.dropdown class="hover:bg-gray-800 transition-colors cursor-pointer rounded-t-md p-2 -ml-2"> 
+                            <x-slot name="trigger">
+                                <button class="focus:outline-none font-medium text-primary-dark pointer-events-none">
+                                    Category
+                                </button>
+                            </x-slot>
+
+                            <div x-data="{ currentCategory: '' }">
+                                @foreach (\App\Models\Category::all() as $category)
+                                    <x-dropdown-item class="text-white hover:bg-gray-800">
+                                        <div @click="currentCategory = {{ $category->id }}">
+                                            <template x-if="currentCategory == {{ $category->id }}">
+                                                Easy working
+                                            </template>
+
+                                            <template x-if="currentCategory != {{ $category->id }}">
+                                                Easy lol
+                                            </template>
+                                            {{ ucwords($category->name) }}
+                                        </div>
+                                    </x-dropdown-item>
+                                @endforeach
+                            </div>
+                        </x-admin.dropdown>
+                        
+                        {{-- <select id="category_id" class="block w-full rounded-md focus:outline-none py-3 px-4 text-secondary font-medium" name="category_id" required>
+                                    @foreach (\App\Models\Category::all() as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                            {{ ucwords($category->name) }}
+                                        </option>
+                                    @endforeach
+                        </select> --}}
+
+                        <h2 class="text-gray-200 font-medium text-lg mb-6">Example Post Title</h2>
             
                         <div class="text-gray-200 space-y-4">
-                            post body haha
-                        </div>            
+                            Example Post Body
+                        </div>
                     </section>
                 </div>
             </article>
+
+            <div class="mt-12 w-full">
+                <button type="submit" class="bg-gray-800 hover:bg-gray-700 hover:text-gray-200 transition-colors w-full py-2 rounded-md text-gray-600 font-medium">Cancel</button>
+            </div>
+
+            <div class="mt-3 w-full">
+                <button type="submit" class="bg-primary-dark hover:bg-primary-light transition-colors w-full py-2 rounded-md text-secondary font-medium">Publish</button>
+            </div>
         </form>
     </x-form.admin.panel>
 </x-layouts.admin>

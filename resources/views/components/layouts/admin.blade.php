@@ -7,7 +7,7 @@
     <link href="{{ asset('css/app.css') }}" rel=stylesheet>
 
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="{{ asset('js/searchbar.js') }}" defer></script>
+    <script src="{{ asset('js/admin.js') }}" async></script>
 
     <title>bagita | Dashboard</title>
 </head>
