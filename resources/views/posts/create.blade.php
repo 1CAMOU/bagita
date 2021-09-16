@@ -14,7 +14,7 @@
         <!-- Validation Errors -->
         <x-form.validation-errors class="mb-4" :errors="$errors" />
 
-        {{-- <form method="POST" action="/admin/post" enctype="multipart/form-data">
+        <form method="POST" action="/admin/post" enctype="multipart/form-data">
             @csrf
 
             <!-- Title -->
@@ -68,8 +68,8 @@
             <div class="mt-8 w-full">
                 <button type="submit" class="bg-primary-dark hover:bg-primary-light transition-colors w-full py-4 rounded-md text-secondary font-medium">Publish</button>
             </div>
-        </form> --}}
-
+        </form>
+{{-- 
         <form method="POST" action="/admin/post" enctype="multipart/form-data">
             @csrf
 
@@ -124,13 +124,13 @@
                             </div>
                         </x-admin.dropdown>
                         
-                        {{-- <select id="category_id" class="block w-full rounded-md focus:outline-none py-3 px-4 text-secondary font-medium" name="category_id" required>
+                        <select id="category_id" class="block w-full rounded-md focus:outline-none py-3 px-4 text-secondary font-medium" name="category_id" required>
                                     @foreach (\App\Models\Category::all() as $category)
                                         <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
                                             {{ ucwords($category->name) }}
                                         </option>
                                     @endforeach
-                        </select> --}}
+                        </select> 
 
                         <h2 class="text-gray-200 font-medium text-lg mb-6">Example Post Title</h2>
             
@@ -148,6 +148,6 @@
             <div class="mt-3 w-full">
                 <button type="submit" class="bg-primary-dark hover:bg-primary-light transition-colors w-full py-2 rounded-md text-secondary font-medium">Publish</button>
             </div>
-        </form>
+        </form> --}}
     </x-form.admin.panel>
 </x-layouts.admin>

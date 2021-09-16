@@ -33,7 +33,7 @@
                 <li class="mr-2 md:mr-6 relative w-full">
                     <span class="text-gray-500 hover:text-gray-200 transition-colors flex items-center space-x-3">
                         <x-icon name="pencil-alt" />
-                        <a href="/admin/posts">Posts</a>
+                        <p class="cursor-default">Posts</p>
                     </span>
                     
                     <a class="text-gray-500 hover:text-primary transition-colors absolute text-xl top-0 right-0" href="/admin/post/create">+</a>
