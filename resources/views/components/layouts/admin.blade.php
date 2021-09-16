@@ -31,9 +31,9 @@
 
             <ul class="flex flex-col space-y-2 mt-6 w-full">
                 <li class="mr-2 md:mr-6 relative w-full">
-                    <span class="{{ request()->is('admin/post/create') ? 'text-gray-200 hover:text-white' : 'text-gray-500 hover:text-gray-200' }} transition-colors flex items-center space-x-3">
+                    <span class="{{ request()->is('admin/posts') ? 'text-gray-200 hover:text-white' : 'text-gray-500 hover:text-gray-200' }} transition-colors flex items-center space-x-3">
                         <x-icon name="pencil-alt" />
-                        <p class="cursor-default">Posts</p>
+                        <a href="/admin/posts">Posts</a>
                     </span>
                     
                     <a class="text-gray-500 hover:text-primary transition-colors absolute text-xl top-0 right-0" href="/admin/post/create">+</a>
