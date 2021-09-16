@@ -62,7 +62,7 @@
             <div class="mt-4">
                 <x-form.admin.label for="thumbnail" :value="__('Thumbnail')" />
 
-                <x-form.input id="thumbnail" class="block mt-1 w-full bg-white" type="file" name="thumbnail" :value="old('thumbnail')" required />
+                <x-form.input id="thumbnail" class="block mt-1 w-full bg-white" type="file" name="thumbnail" :value="old('thumbnail')" accept="image/*" />
             </div>
 
             <div class="mt-8 w-full">
