@@ -2,7 +2,7 @@
 
 <div class="hover:bg-gray-150 transition-colors max-w-screen-xl mx-auto mb-10 rounded-md flex flex-col md:flex-row justify-between md:items-center p-3">
     <a href="/post/{{ $post->slug }}" class="w-full mr-6">
-        <img class="object-cover rounded-sm w-11/12 h-80" src="{{ asset('storage/' . $post->thumbnail) }}" alt="Post Thumbnail" width=800 height=370>
+        <img class="object-cover rounded-sm h-80" src="{{ asset('storage/' . $post->thumbnail) }}" alt="Post Thumbnail" width=800 height=370>
     </a>
 
     <div>

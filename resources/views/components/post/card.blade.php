@@ -3,7 +3,7 @@
 <div class="hover:bg-gray-150 transition-colors rounded-md flex flex-col justify-between p-3 md:h-100">
     <a href="/post/{{ $post->slug }}">
         <article class="">
-            <img class="w-full rounded-sm" src="{{ asset('storage/' . $post->thumbnail) }}" alt="Post Thumbnail">
+            <img class="w-full h-52 rounded-sm object-cover" src="{{ asset('storage/' . $post->thumbnail) }}" alt="Post Thumbnail">
             <div>
                 <h4 class="text-blue-700 mt-3 font-medium break">{{ $post->category->name }}</h4>
                 <h2 class="text-secondary font-semibold text-lg mb-3">{{ $post->title }}</h2>

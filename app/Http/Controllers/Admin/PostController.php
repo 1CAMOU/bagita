@@ -10,7 +10,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('admin.posts.index');
+        return view('admin.posts.index', [
+            'posts' => Post::paginate(50)
+        ]);
     }
 
     public function create(Post $post)

@@ -1,13 +1,7 @@
 <x-layouts.admin>
     <h1 class="text-2xl font-medium text-white">Posts</h1>
 
-    <x-form.admin.panel>
-        <!-- Title -->
-        <div class="flex items-center mb-4">
-            <x-icon name="click" class="text-primary" />
-            <h2 class="text-primary font-medium text-xl ml-5 mt-1">Create Blog Post</h2>
-        </div>
-
+    <x-form.admin.panel icon="click" title="Create Blog Post ">
         <!-- Session Status -->
         <x-form.session-status class="mb-4" :status="session('status')" />
 
