@@ -40,7 +40,28 @@ class PostController extends Controller
         return redirect('/post/' . $attributes['slug']);
     }
 
-    public function edit()
+    public function edit(Post $post)
     {
+        return view('admin.posts.edit', ['post' => $post]);
+    }
+
+    public function update(Post $post)
+    {
+        $attributes = request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+            'category_id' => ['required', Rule::exists('categories', 'id')],
+            'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post)],
+            'thumbnail' => ['image'],
+        ]);
+
+        if (isset($attributes['thumbnail'])) {
+            $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+        }
+
+        $post->update($attributes);
+
+        return back()->with('toast', 'Post has been updated!');
     }
 }

@@ -22,3 +22,4 @@ Route::get('admin/posts', [AdminPostController::class, 'index']);
 Route::get('admin/post/create', [AdminPostController::class, 'create'])->middleware('admin');
 Route::get('admin/post/{post}/edit', [AdminPostController::class, 'edit'])->middleware('admin');
 Route::post('admin/post', [AdminPostController::class, 'store'])->middleware('admin');
+Route::patch('admin/post/{post}', [AdminPostController::class, 'update'])->middleware('admin');

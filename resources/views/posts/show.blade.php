@@ -17,7 +17,7 @@
             </aside>
     
             <section class="w-full md:w-1/2">
-                <h4 class="text-blue-700 font-medium">{{ $post->category->name }}</h4>
+                <a href="/?category={{ $post->category->slug }}" class="text-blue-700 font-medium">{{ $post->category->name }}</a>
                 <h2 class="text-secondary font-semibold text-lg mb-6">{{ $post->title }}</h2>
     
                 <div class="text-secondary space-y-4">
