@@ -49,6 +49,7 @@
               </div>
             </div>
           </div>
-          
+
+          {{ $posts->links() }}
     </x-form.admin.panel>
 </x-layouts.admin>

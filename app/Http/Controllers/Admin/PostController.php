@@ -11,7 +11,7 @@ class PostController extends Controller
     public function index()
     {
         return view('admin.posts.index', [
-            'posts' => Post::paginate(50)
+            'posts' => Post::paginate(6)
         ]);
     }
 
@@ -38,5 +38,9 @@ class PostController extends Controller
         Post::create($attributes);
 
         return redirect('/post/' . $attributes['slug']);
+    }
+
+    public function edit()
+    {
     }
 }
