@@ -8,7 +8,7 @@
         <!-- Validation Errors -->
         <x-form.validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="/admin/post/{{ $post->id }}" enctype="multipart/form-data">
+        <form method="POST" action="/admin/posts/{{ $post->id }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
 

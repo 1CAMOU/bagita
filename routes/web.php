@@ -16,11 +16,7 @@ Route::post('post/{post:slug}/comments', [CommentController::class, 'store'])->m
 Route::post('newsletter', NewsletterController::class);
 
 // Admin Dashboard
-Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])->middleware('admin');
-
-Route::get('admin/posts', [AdminPostController::class, 'index']);
-Route::get('admin/post/create', [AdminPostController::class, 'create'])->middleware('admin');
-Route::get('admin/post/{post}/edit', [AdminPostController::class, 'edit'])->middleware('admin');
-Route::post('admin/post', [AdminPostController::class, 'store'])->middleware('admin');
-Route::patch('admin/post/{post}', [AdminPostController::class, 'update'])->middleware('admin');
-Route::delete('admin/post/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
+Route::middleware('admin')->group(function () {
+    Route::get('admin/dashboard', [AdminDashboardController::class, 'index']);
+    Route::resource('admin/posts', AdminPostController::class)->except('show');
+});

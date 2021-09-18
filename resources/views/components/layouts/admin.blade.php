@@ -36,7 +36,7 @@
                         <a href="/admin/posts">Posts</a>
                     </span>
                     
-                    <a class="text-gray-500 hover:text-primary transition-colors absolute text-xl top-0 right-0" href="/admin/post/create">+</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors absolute text-xl top-0 right-0" href="/admin/posts/create">+</a>
                 </li>
             </ul>
         </nav>

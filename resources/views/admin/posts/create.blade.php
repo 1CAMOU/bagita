@@ -8,7 +8,7 @@
         <!-- Validation Errors -->
         <x-form.validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="/admin/post" enctype="multipart/form-data">
+        <form method="POST" action="/admin/posts" enctype="multipart/form-data">
             @csrf
 
             <!-- Title -->
@@ -64,7 +64,7 @@
             </div>
         </form>
 {{-- 
-        <form method="POST" action="/admin/post" enctype="multipart/form-data">
+        <form method="POST" action="/admin/posts" enctype="multipart/form-data">
             @csrf
 
             <article class="flex flex-col my-8 relative">

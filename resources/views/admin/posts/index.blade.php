@@ -39,11 +39,11 @@
                                 </td>
 
                                 <td class="pl-6 pr-1 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="/admin/post/{{ $post->id }}/edit" class="text-gray-700 hover:text-gray-900">Edit</a>
+                                    <a href="/admin/posts/{{ $post->id }}/edit" class="text-gray-700 hover:text-gray-900">Edit</a>
                                 </td>
 
                                 <td class="pr-6 pl-1 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <form method="POST" action="/admin/post/{{ $post->id }}">
+                                    <form method="POST" action="/admin/posts/{{ $post->id }}">
                                         @csrf
                                         @method('DELETE')
 
