@@ -17,5 +17,5 @@ This project is still a work in progress, so here is a brief roadmap of what fea
 -   [X] User authentication
 -   [X] Comments
 -   [X] Newsletter Integration
+-   [X] CMS Admin Dashboard
 -   [ ] Easy Blog Setup
--   [ ] CMS Admin Dashboard
