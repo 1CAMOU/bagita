@@ -1,9 +1,11 @@
 ![Bagita](https://i.imgur.com/GqK7b4o.png)
-# v0.1 [![CodeFactor](https://www.codefactor.io/repository/github/1camou/bagita/badge)](https://www.codefactor.io/repository/github/1camou/bagita)
+# v0.1
+![CodeFactor](https://www.codefactor.io/repository/github/1camou/bagita/badge)
+![License](https://img.shields.io/badge/license-MIT-9cf)
 
-Bagita is a Ghost inspired, PHP-based and easy-to-use blog. It helps the user to manage and extend his own blog system completely without any difficulties.
+Bagita is an easy-to-use blog based on Php. It helps you to manage and extend your own blog system completely without any difficulties.
 
-## Roadmap
+## Roadmap v0.2
 
 This project is still a work in progress, so here is a brief roadmap of what features are currently in the works.
 
