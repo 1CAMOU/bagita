@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 
+require __DIR__ . '/installation.php';
 require __DIR__ . '/auth.php';
 
 Route::get('/', [PostController::class, 'index'])->name('home');
