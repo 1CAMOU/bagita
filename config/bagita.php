@@ -13,6 +13,6 @@ return [
     |
     */
 
-    'installation_step' => 0,
+    'installation_step' => 1,
 
 ];
